@@ -21,4 +21,25 @@ app.MapPost("/api/teams", async(TeamsService teamsService, Team team) =>
     return Results.Ok();
 });
 
+app.MapPut("/api/teams/{id}", async (TeamsService teamsService, string id, Team updateTeam) =>
+{
+    var team = await teamsService.Get(id);
+    if (team is null) return Results.NotFound();
+
+    updateTeam.Id = team.Id;
+    await teamsService.Update(id, updateTeam);
+
+    return Results.NoContent();
+});
+
+app.MapDelete("/api/teams/{id}", async (TeamsService teamsService, string id) =>
+{
+    var team = await teamsService.Get(id);
+    if (team is null) return Results.NotFound();
+
+    await teamsService.Remove(team.Id);
+
+    return Results.NoContent();
+});
+
 app.Run();
