@@ -9,12 +9,13 @@ appsettings.json -> Here you have to provide the connection string from the Mong
 
 
 Team.cs -> Team obj. structure: {Id, Name, Scores[]}
+
            JSON MongoDB obj. structure:
-    {
-      "_id": { "$oid": "6376036a1f2d91fb4846a7c5"},
-      "Name": "Team 2",
-      "Scores": [20, 15, 20, 15, 15, 20, 20, 20]
-    }
+{
+   "_id": { "$oid": "6376036a1f2d91fb4846a7c5"},
+   "Name": "Team 2",
+   "Scores": [20, 15, 20, 15, 15, 20, 20, 20]
+}
     
     
     
