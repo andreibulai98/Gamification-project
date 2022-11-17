@@ -9,13 +9,8 @@ appsettings.json -> Here you have to provide the connection string from the Mong
 
 
 Team.cs -> Team obj. structure: { Id, Name, Scores[] }
-           JSON MongoDB obj. structure:
-{
-   "Name": "Team 2",
-   "Scores": [20, 15, 20, 15, 15, 20, 20, 20]
-}
-    
-    
+
+
     
 TeamsService.cs -> methods for:
   - Returning a list of Teams
